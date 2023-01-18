@@ -28,6 +28,47 @@
   color: #61dafb;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.btn-pink{
+  background-color: #fb619c !important;
+  color: #FFFFFF !important;
+}
+
+.header{
+  padding: 1rem;
+  color: #FFFFFF;
+  background-color: #0da5fd;
+  box-shadow: 1px 2px 4px 2px rgb(0 0 0 / 10%);
+}
+
+.box-shadow{
+  box-shadow:-2px 0px 10px 2px rgba(184,184,184,1);
+}
+
+.error, .required{
+  color: red;
+}
+
+.top-70{
+  top: 70%  !important;
+}
+
+.align-vertical{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.page-center-align{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
