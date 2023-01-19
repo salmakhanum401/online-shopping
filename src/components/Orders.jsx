@@ -6,14 +6,14 @@ import { useNavigate, useParams } from 'react-router-dom';
 const Orders = () => {
     const { userId } = useParams();
     const [orders, setOrders] = useState([]);
-    const fetchCartItems =()=>{
+    const fetchOrders =()=>{
         axios.get(`${process.env.REACT_APP_API_URL}/orders/${userId}`)
         .then((res) => {
             setOrders(res.data.data);
         })
     }
     useEffect(() => {
-        fetchCartItems();
+        fetchOrders();
     }, []);
     
   return (

@@ -5,12 +5,12 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 const Cart = () => {
     const { userId } = useParams();
-    const [products, setProducts] = useState([]);
+    const [cartItems, setCartItems] = useState([]);
     const navigate = useNavigate();
     const fetchCartItems =()=>{
         axios.get(`${process.env.REACT_APP_API_URL}/cart/${userId}`)
         .then((res) => {
-            setProducts(res.data.data);
+            setCartItems(res.data.data);
         })
     }
     useEffect(() => {
@@ -25,7 +25,7 @@ const Cart = () => {
     }
 
     const buyNow = ()=>{
-        const productIds = products.map(item => item.product._id);
+        const productIds = cartItems.map(item => item.product._id);
         axios.post(`${process.env.REACT_APP_API_URL}/orders`, {
             userId,
             products : productIds
@@ -42,7 +42,7 @@ const Cart = () => {
     <>
     <h3>Cart Items</h3>
     <div className='d-flex flex-column flex-wrap mt-3' style={{gap: "10px"}}>
-            {products.map((item) => {
+            {cartItems.map((item) => {
                 return (
                     <div
                         className="cursor-pointer box-shadow d-flex align-items-center justify-content-between"

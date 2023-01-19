@@ -34,8 +34,8 @@ const ProductInfo = () => {
             <div className='h5'> {product.productName}</div>
             <div className='h3'> &#8377;{product.price}</div>
             <div className='h6'>Rating: {product.rating}</div>
-            {/* <button style={{maxWidth: "15%"}} className='btn btn-warning text-white' onClick={() => addToCart(true)}>Add to cart</button> */}
-            <button style={{maxWidth: "15%"}} className='btn btn-primary' onClick={addToCart}>Buy</button>
+            <button style={{maxWidth: "15%"}} className='btn btn-warning text-white' onClick={addToCart}>Add to cart</button>
+            {/* <button style={{maxWidth: "15%"}} className='btn btn-primary' onClick={addToCart}>Buy</button> */}
             <div>
                 <div className='h4'>Description:</div>
                 <div>{product.description}</div>
